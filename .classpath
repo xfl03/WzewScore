@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Core"/>
+	<classpathentry kind="src" path="Test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="E:/org/htmlparser/2.0/filterbuilder-2.0.jar"/>
+	<classpathentry kind="lib" path="E:/org/htmlparser/2.0/htmllexer-2.0.jar"/>
+	<classpathentry kind="lib" path="E:/org/htmlparser/2.0/htmlparser-2.0.jar"/>
+	<classpathentry kind="lib" path="E:/org/htmlparser/2.0/thumbelina-2.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
