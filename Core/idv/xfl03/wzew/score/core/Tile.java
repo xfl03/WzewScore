@@ -29,7 +29,10 @@ public class Tile{
 	public String science;//sciences' total
 	public String total;
 	public static int getRank(String rank,int total){
-		return (int)(total*(1-Float.parseFloat(rank)/100));
+		return getRank(Float.parseFloat(rank),total);
+	}
+	public static int getRank(float rank,int total){
+		return (int)(total*(1-rank/100));
 	}
 	public void set(int i,String tt){
 		switch(i){
