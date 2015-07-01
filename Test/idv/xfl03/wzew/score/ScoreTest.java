@@ -14,22 +14,22 @@ public class ScoreTest {
 
 	public static void main(String[] args) {
 		try {
-			System.out.println("ÇëÑ¡Ôñ¹¦ÄÜ");
+			System.out.println("è¯·é€‰æ‹©åŠŸèƒ½");
 			for(int i=1;i<=14;i++){
 				String fix=" ";
 				if(i>=10)
 					fix="";
-				System.out.print(i+fix+"- ²éÑ¯ "+Tile.getName(i+4)+" ³É¼¨");
+				System.out.print(i+fix+"- æŸ¥è¯¢ "+Tile.getName(i+4)+" æˆç»©");
 				if(i%3==0){
 					System.out.println();
 				}else{
 					System.out.print(" ");
 				}
 			}
-			System.out.println("15- ²éÑ¯¸÷¿ÆÅÅÃû");
+			System.out.println("15- æŸ¥è¯¢å„ç§‘æ’å");
 			BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
 			int input=Integer.parseInt(reader.readLine());
-			if(input<14)
+			if(input<=14)
 				query(input);
 			else
 				an();
@@ -41,12 +41,12 @@ public class ScoreTest {
 	private static void query(int index) throws Exception{
 		int iii=index+4;
 		String subject=Tile.getName(iii);
-		System.out.println("ÇëÊäÈë¿¼ºÅÒÔ²éÑ¯ "+subject+" ³É¼¨ºÍÅÅÃû");
+		System.out.println("è¯·è¾“å…¥è€ƒå·ä»¥æŸ¥è¯¢ "+subject+" æˆç»©å’Œæ’å");
 		BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
 		String input=reader.readLine();
 		ArrayList<Tile> tiles=(new PageParser()).parse(input);
 		if(tiles.size()==0){
-			System.out.println("¿¼ºÅ "+input+" ²»´æÔÚ");
+			System.out.println("è€ƒå· "+input+" ä¸å­˜åœ¨");
 			System.out.println();
 			query(index);
 			return;
@@ -89,8 +89,8 @@ public class ScoreTest {
 					rankMin=rank;
 				if(!cut){
 					cut=true;
-					System.out.println("×î¸ß·Ö "+scoreTop+" ×îµÍ·Ö "+scoreMin+" ¼«²î "+(scoreTop-scoreMin));
-					System.out.println("Æ½¾ù·Ö  "+parse((scoreTotal/number)));
+					System.out.println("æœ€é«˜åˆ† "+scoreTop+" æœ€ä½åˆ† "+scoreMin+" æå·® "+(scoreTop-scoreMin));
+					System.out.println("å¹³å‡åˆ†  "+parse((scoreTotal/number)));
 					System.out.println();
 				}
 				if(rank!=0){
@@ -101,16 +101,16 @@ public class ScoreTest {
 			}
 		}
 		float averageRank=(float)Math.round((rankTotal/number)*10)/10;
-		System.out.println("×î¸ßÅÅÃû "+rankTop+"% ("+Tile.getRank(rankTop,TOTAL_STUDENTS)+") ×îµÍÅÅÃû "+rankMin+"% ("+Tile.getRank(rankMin,TOTAL_STUDENTS)+") ¼«²î "+((float)(Math.round((rankTop-rankMin)*10))/10)+"% ("+(int)((rankTop-rankMin)/100*TOTAL_STUDENTS)+")");
-		System.out.println("Æ½¾ùÅÅÃû  "+averageRank+"% ("+Tile.getRank(averageRank,TOTAL_STUDENTS)+")");
+		System.out.println("æœ€é«˜æ’å "+rankTop+"% ("+Tile.getRank(rankTop,TOTAL_STUDENTS)+") æœ€ä½æ’å "+rankMin+"% ("+Tile.getRank(rankMin,TOTAL_STUDENTS)+") æå·® "+((float)(Math.round((rankTop-rankMin)*10))/10)+"% ("+(int)((rankTop-rankMin)/100*TOTAL_STUDENTS)+")");
+		System.out.println("å¹³å‡æ’å  "+averageRank+"% ("+Tile.getRank(averageRank,TOTAL_STUDENTS)+")");
 	}
 	private static void an() throws Exception{
-		System.out.println("ÇëÊäÈë¿¼ºÅÒÔ²éÑ¯ËùÓĞÅÅÃû");
+		System.out.println("è¯·è¾“å…¥è€ƒå·ä»¥æŸ¥è¯¢æ‰€æœ‰æ’å");
 		BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
 		String input=reader.readLine();
 		ArrayList<Tile> tiles=(new PageParser()).parse(input);
 		if(tiles.size()==0){
-			System.out.println("¿¼ºÅ "+input+" ²»´æÔÚ");
+			System.out.println("è€ƒå· "+input+" ä¸å­˜åœ¨");
 			System.out.println();
 			an();
 			return;
@@ -156,7 +156,7 @@ public class ScoreTest {
 			}
 			list[index]=i;
 		}
-		System.out.println("¿ÆÄ¿    Æ½¾ùÃû´Î     Æ½¾ù·Ö");
+		System.out.println("ç§‘ç›®    å¹³å‡åæ¬¡     å¹³å‡åˆ†");
 		for(int i=0;i<11;i++){
 			int index=list[i];
 			System.out.println(Tile.getName(index+5)+" "+parseRank(ranks[index])+" "+scores[index]);
