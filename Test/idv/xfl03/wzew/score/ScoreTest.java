@@ -9,6 +9,7 @@ import idv.xfl03.wzew.score.core.Tile;
 
 public class ScoreTest {
 	
+	public static final String VERSION="1.0.0";
 	public static final int TOTAL_STUDENTS=481;
 
 	public static void main(String[] args) {
